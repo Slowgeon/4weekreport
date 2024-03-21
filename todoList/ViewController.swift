@@ -19,11 +19,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
     }
     @IBAction func addButton(_ sender: UIButton) {
-    datas.append("Todo\(datas.count)")
-        tableView.reloadData()
+        datas.append("Todo\(datas.count)")
+            tableView.reloadData()
     }
-    @IBAction func switchOne(_ sender: UISwitch) {
-    }
+    
+
     
     /*@objc func deleteBtnAction(_ sender: UIButton) {
         let point = sender.convert(CGPoint.zero, to: tableView)
