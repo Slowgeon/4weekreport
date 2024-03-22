@@ -10,8 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var datas = ["Todo 1", "Todo 2", "Todo 3", "Todo 4"] // 버튼눌럿을떼 동작만들기 append하게 만들고 리로드까지 같이 실행되게
-
-  
+   
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,18 +18,39 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
     }
     @IBAction func addButton(_ sender: UIButton) {
-        datas.append("Todo\(datas.count)")
-            tableView.reloadData()
-    }
-    
 
+        let title = "Todo List"
+        let message = "추가하기"
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        let ok = UIAlertAction(title: "추가", style: .default) { (_) in
+            if let txt = alert.textFields?[0]{
+                      if txt.text?.isEmpty != true {
+                          print("입력값 \(txt.text!)")
+                      } else {
+                          print("입력된 값이 없습니다.")
+                      }
+                  }
+            self.datas.append(txt.text)
+            self.tableView.reloadData()
+        }
+        
+        alert.addAction(cancel)
+        alert.addAction(ok)
+        
+        
+        self.present(alert, animated: true)
+        alert.addTextField(){ (tf) in
+            tf.placeholder = String()
+            
     
-    /*@objc func deleteBtnAction(_ sender: UIButton) {
-        let point = sender.convert(CGPoint.zero, to: tableView)
-        guard let indexPath = tableView.indexPathForRow(at: point) else { return }
-        datas.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .automatic)
-    } */
+    
+      
+        }
+    }
+   
+    
     func setUITableView() {
         
        // let tableView = UITableView()
