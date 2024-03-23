@@ -20,7 +20,9 @@ class TableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
+    
     // Todo완료 스위치작동코드 textLabel을 옵셔널체이닝으로 사용
+    // 스위치 초기셋팅 inspector 통해 off로 설정
     @IBAction func firstSwitch(_ sender: UISwitch) {
         if sender.isOn {
             textLabel?.attributedText = textLabel?.text?.strikeThrough()

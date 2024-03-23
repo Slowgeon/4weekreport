@@ -18,11 +18,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
            }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUITableView()
         let nib = UINib(nibName: "TableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "TableViewCell")
     }
-
+   
+// 추가하기버튼 Alert 컨트롤러 구현
     @IBAction func addButton(_ sender: UIButton) {
         let title = "Todo List"
         let message = "추가하기"
@@ -50,7 +52,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
    
-    
+    // tableView 리스트 초기화면 구현
     func setUITableView() {
         
        // let tableView = UITableView()
@@ -72,6 +74,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Selected: \(datas[indexPath.row])")
         tableView.deselectRow(at: indexPath, animated: true)
+    
+    }
+    // Todo리스트 스와이프로 삭제기능구현코드
+    func tableView(_ tableView: UITableView, editingStyleForRowat indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+            datas.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+        }
     }
 
 }

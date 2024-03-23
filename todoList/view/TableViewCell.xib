@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="370" height="57"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIu-qV-cqH">
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wIu-qV-cqH">
                         <rect key="frame" x="291" y="13" width="49" height="31"/>
                         <connections>
                             <action selector="firstSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="P7y-nj-yhC"/>
