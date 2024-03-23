@@ -24,10 +24,10 @@
                     </switch>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="wIu-qV-cqH" secondAttribute="trailing" constant="32" id="2sh-ME-4Yf"/>
-                    <constraint firstAttribute="bottom" secondItem="wIu-qV-cqH" secondAttribute="bottom" constant="13" id="9us-Ez-Wtx"/>
-                    <constraint firstItem="wIu-qV-cqH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="Rto-6N-SHf"/>
-                    <constraint firstItem="wIu-qV-cqH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="291" id="SEF-7V-6l8"/>
+                    <constraint firstAttribute="trailing" secondItem="wIu-qV-cqH" secondAttribute="trailing" constant="32" id="8Kt-GY-68Z"/>
+                    <constraint firstItem="wIu-qV-cqH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="U6T-YM-7HR"/>
+                    <constraint firstItem="wIu-qV-cqH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="291" id="XaL-wX-hBT"/>
+                    <constraint firstAttribute="bottom" secondItem="wIu-qV-cqH" secondAttribute="bottom" constant="13" id="smz-3z-xOS"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
