@@ -91,8 +91,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
 }
-//
 
+// Todo 리스트 스위치작동시 완료표시 코드구현
 extension String {
     func strikeThrough() -> NSAttributedString {
         let attributeString = NSMutableAttributedString(string: self)
